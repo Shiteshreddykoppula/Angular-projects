@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { AddItemFormComponent } from './add-item-form/add-item-form.component';
 import { BudgetitemcardComponent } from './budgetitemlist/budgetitemcard/budgetitemcard.component';
+import {FormsModule} from '@angular/forms'
+import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,9 @@ import { BudgetitemcardComponent } from './budgetitemlist/budgetitemcard/budgeti
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
