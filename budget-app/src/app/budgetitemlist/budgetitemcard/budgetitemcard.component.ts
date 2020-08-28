@@ -9,6 +9,8 @@ import { BudgetItem } from 'src/shared/models/budget-item.model';
 export class BudgetitemcardComponent implements OnInit {
   @Input() item: BudgetItem;
   @Output() xButtonClick: EventEmitter<any> = new EventEmitter<any>();
+  @Output() cardClick: EventEmitter<any> = new EventEmitter<any>();
+  
   constructor() { }
 
   ngOnInit(): void {
@@ -16,6 +18,8 @@ export class BudgetitemcardComponent implements OnInit {
   onXButtonclick(){
     //here we want to emit an event
     this.xButtonClick.emit();
+    }
+  onCardClick(){
+    this.cardClick.emit();
   }
-
 }
