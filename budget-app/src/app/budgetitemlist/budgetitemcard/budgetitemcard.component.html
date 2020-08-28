@@ -1,0 +1,14 @@
+<div class="root">
+    <div class="budget-item" (click)="onCardClick()" [ngClass]="{'income':item.amount>=0, 'expense':item.amount<0}">
+        <div class="description">
+            <p>{{item.description}}</p>
+        </div>
+        <div class="amount">
+            <p *ngIf="item.amount>=0">{{item.amount|currency:'USD': true: '1.0-2'}}</p>
+            <p *ngIf="item.amount<0">{{-(item.amount)|currency:'USD': true: '1.0-2'}}</p>
+        </div>
+    </div>
+    <div class="x-icon-button" (click)="onXButtonclick() ">
+        
+    </div>
+</div>
